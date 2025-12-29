@@ -4,11 +4,11 @@
 const handleData = () => {
     let grid = view.ctx.controllersMap.get('grid')
     let selectedDataList = grid.state.selectedData
-    let data = {ids:[]}
+    let req = {ids:[]}
     selectedDataList.forEach(item => {
-        data.ids.push(item.id)
+        req.ids.push(item.id)
     })
 
-    uiLogic.data = data
+    uiLogic.req = req
 }
 handleData()
